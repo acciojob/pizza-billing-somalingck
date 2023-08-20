@@ -3,7 +3,7 @@ package com.driver;
 public class Pizza {
 
     private int price;
-    private final Boolean isVeg;
+    private Boolean isVeg;
     private String bill;
     private Boolean isExtraCheese;
     private Boolean isExtraToppings;
@@ -60,7 +60,10 @@ public class Pizza {
     public String getBill(){
         // your code goes here
 
-        if (this.isBillGenerated) {
+//            if (this.isBillGenerated) {
+//                return null;
+//            }
+        if (this.isBillGenerated == true) {
             return this.bill;
         }
         isBillGenerated = true;
@@ -84,7 +87,7 @@ public class Pizza {
         }
 
         if (this.isTakeAway) {
-            this.bill += "Paper-bag Added: 20\n";
+            this.bill += "Paperbag Added: 20\n";
 
         }
 
